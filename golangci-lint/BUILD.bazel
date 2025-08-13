@@ -1,4 +1,4 @@
-load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
+load("@rules_go//go:def.bzl", "go_library", "go_test")
 load("//golangci-lint:def.bzl", "ANALYZERS", "golangci_lint_analyzers")
 load("//private:deps_test.bzl", "prune_ext_deps")
 load("//private:gen_deps.bzl", "generate_deps")

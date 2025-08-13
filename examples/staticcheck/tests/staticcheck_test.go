@@ -18,7 +18,7 @@ func TestMain(m *testing.M) {
 load("@bazel_gazelle//:def.bzl", "gazelle")
 load("@com_github_sluongng_nogo_analyzer//staticcheck:def.bzl", "staticcheck_analyzers")
 load("@com_github_sluongng_nogo_analyzer//:def.bzl", "nogo_config")
-load("@io_bazel_rules_go//go:def.bzl", "go_library", "nogo")
+load("@rules_go//go:def.bzl", "go_library", "nogo")
 
 # gazelle:prefix github.com/sluongng/nogo-analyzer/examples/staticcheck
 gazelle(name = "gazelle")

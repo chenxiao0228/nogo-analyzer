@@ -15,7 +15,7 @@ func TestMain(m *testing.M) {
 	bazel_testing.TestMain(m, bazel_testing.Args{
 		Main: `
 -- BUILD.bazel --
-load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_tool_library", "nogo")
+load("@rules_go//go:def.bzl", "go_library", "go_tool_library", "nogo")
 load("@com_github_sluongng_nogo_analyzer//staticcheck:def.bzl", "staticcheck_analyzers")
 
 nogo(

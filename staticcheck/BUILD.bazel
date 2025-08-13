@@ -1,7 +1,7 @@
-load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
-load("//staticcheck:def.bzl", "ANALYZERS", "staticcheck_analyzers")
-load("//private:gen_deps.bzl", "generate_deps")
+load("@rules_go//go:def.bzl", "go_library", "go_test")
 load("//:def.bzl", "nogo_config")
+load("//private:gen_deps.bzl", "generate_deps")
+load("//staticcheck:def.bzl", "ANALYZERS", "staticcheck_analyzers")
 
 # gazelle:lang test_filegroup
 
