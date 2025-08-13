@@ -67,7 +67,7 @@ load("@com_github_sluongng_nogo_analyzer//staticcheck:deps.bzl",  "staticcheck_d
 
 staticcheck_deps()
 
-load("@bazel_gazelle//:deps.bzl", "gazelle_dependencies")
+load("@gazelle//:deps.bzl", "gazelle_dependencies")
 
 gazelle_dependencies()
 `,

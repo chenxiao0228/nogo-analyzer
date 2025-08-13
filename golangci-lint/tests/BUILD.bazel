@@ -8,7 +8,7 @@ go_bazel_test(
     rule_files = [
         "@com_github_sluongng_nogo_analyzer//:all_files",
         "@rules_go//:all_files",
-        "@bazel_gazelle//:all_files",
+        "@gazelle//:all_files",
     ],
     tags = ["manual"],
 )

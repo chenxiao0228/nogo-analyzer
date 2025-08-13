@@ -1,5 +1,5 @@
-load("@bazel_gazelle//:def.bzl", "DEFAULT_LANGUAGES", "gazelle", "gazelle_binary")
 load("@com_github_bazelbuild_buildtools//buildifier:def.bzl", "buildifier")
+load("@gazelle//:def.bzl", "DEFAULT_LANGUAGES", "gazelle", "gazelle_binary")
 
 # gazelle:exclude .user.bazelrc
 # gazelle:exclude go.work.sum
@@ -33,7 +33,7 @@ filegroup(
 
 gazelle_binary(
     name = "gazelle_binary",
-    languages = DEFAULT_LANGUAGES + ["@bazel_gazelle//internal/language/test_filegroup"],
+    languages = DEFAULT_LANGUAGES + ["@gazelle//internal/language/test_filegroup"],
 )
 
 # gazelle:prefix github.com/sluongng/nogo-analyzer

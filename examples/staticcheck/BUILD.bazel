@@ -1,6 +1,6 @@
-load("@bazel_gazelle//:def.bzl", "gazelle")
 load("@com_github_sluongng_nogo_analyzer//:def.bzl", "nogo_config")
 load("@com_github_sluongng_nogo_analyzer//staticcheck:def.bzl", "staticcheck_analyzers")
+load("@gazelle//:def.bzl", "gazelle")
 load("@rules_go//go:def.bzl", "TOOLS_NOGO", "nogo")
 load(":staticcheck.bzl", "STATICCHECK_ANALYZERS", "STATICCHECK_OVERRIDE")
 

@@ -12,7 +12,7 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 # )
 
 # http_archive(
-#     name = "bazel_gazelle",
+#     name = "gazelle",
 #     sha256 = "d76bf7a60fd8b050444090dfa2837a4eaf9829e1165618ee35dceca5cbdf58d5",
 #     urls = [
 #         "https://mirror.bazel.build/github.com/bazelbuild/bazel-gazelle/releases/download/v0.37.0/bazel-gazelle-v0.37.0.tar.gz",
@@ -67,7 +67,7 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 # go_register_toolchains(version = "1.22.5")
 
-# load("@bazel_gazelle//:deps.bzl", "gazelle_dependencies")
+# load("@gazelle//:deps.bzl", "gazelle_dependencies")
 
 # gazelle_dependencies()
 

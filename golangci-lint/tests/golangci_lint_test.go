@@ -73,7 +73,7 @@ load("@com_github_sluongng_nogo_analyzer//golangci-lint:deps.bzl",  "golangci_li
 
 golangci_lint_deps()
 
-load("@bazel_gazelle//:deps.bzl", "gazelle_dependencies")
+load("@gazelle//:deps.bzl", "gazelle_dependencies")
 
 gazelle_dependencies()
 

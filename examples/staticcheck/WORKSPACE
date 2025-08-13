@@ -36,7 +36,7 @@ go_register_toolchains(
 )
 
 http_archive(
-    name = "bazel_gazelle",
+    name = "gazelle",
     sha256 = "b7387f72efb59f876e4daae42f1d3912d0d45563eac7cb23d1de0b094ab588cf",
     urls = [
         "https://mirror.bazel.build/github.com/bazelbuild/bazel-gazelle/releases/download/v0.34.0/bazel-gazelle-v0.34.0.tar.gz",
@@ -44,7 +44,7 @@ http_archive(
     ],
 )
 
-load("@bazel_gazelle//:deps.bzl", "gazelle_dependencies")
+load("@gazelle//:deps.bzl", "gazelle_dependencies")
 load("//:go_deps.bzl", "go_deps")
 
 # gazelle:repository_macro go_deps.bzl%go_deps

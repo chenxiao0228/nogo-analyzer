@@ -68,7 +68,7 @@ load("@com_github_sluongng_nogo_analyzer//goci-lint/errcheck:deps.bzl",  "errche
 
 errcheck_deps()
 
-load("@bazel_gazelle//:deps.bzl", "gazelle_dependencies")
+load("@gazelle//:deps.bzl", "gazelle_dependencies")
 
 gazelle_dependencies()
 `,

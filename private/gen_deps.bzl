@@ -6,7 +6,7 @@ def generate_deps(
         sum_file,
         targets,
         deps_file = "deps.bzl",
-        gazelle_bin = "@bazel_gazelle//cmd/gazelle:gazelle",
+        gazelle_bin = "@gazelle//cmd/gazelle:gazelle",
         **kwargs):
     """generate_deps helps us generate deps.bzl files from go.mod and go.sum files
 
