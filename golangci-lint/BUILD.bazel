@@ -1,7 +1,6 @@
 load("@rules_go//go:def.bzl", "go_library", "go_test")
 load("//golangci-lint:def.bzl", "ANALYZERS")
 # load("//private:deps_test.bzl", "prune_ext_deps")
-# load("//private:gen_deps.bzl", "generate_deps")
 
 exports_files([
     "def.bzl",
@@ -55,7 +54,6 @@ filegroup(
         "analyzer.go",
         "analyzer_test.go",
         "def.bzl",
-        "deps.bzl",
         "go.mod",
         "go.sum",
         "//golangci-lint/constructor:all_files",

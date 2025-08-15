@@ -21,7 +21,6 @@ filegroup(
         "WORKSPACE",
         "buildbuddy.yaml",
         "def.bzl",
-        "deps.bzl",
         "go.work",
         "//.github:all_files",
         "//goci-lint:all_files",
@@ -44,24 +43,7 @@ gazelle(
     gazelle = "gazelle_binary",
 )
 
-gazelle(
-    name = "update-deps",
-    args = [
-        "-from_file=go.work",
-        "-to_macro=private/deps.bzl%nogo_analyzer_deps",
-        "-prune",
-    ],
-    command = "update-repos",
-    gazelle = "gazelle_binary",
-)
-
 alias(
     name = "goworksync",
     actual = "//tools:goworksync",
 )
-
-# alias(
-#     name = "gobin",
-#     actual = "@rules_go//go:go",
-#     visibility = ["//visibility:public"],
-# )
