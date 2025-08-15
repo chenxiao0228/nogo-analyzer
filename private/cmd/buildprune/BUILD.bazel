@@ -5,7 +5,7 @@ go_library(
     srcs = ["main.go"],
     importpath = "github.com/sluongng/nogo-analyzer/private/cmd/buildprune",
     visibility = ["//visibility:private"],
-    deps = ["@com_github_bazelbuild_buildtools//build:go_default_library"],
+    deps = ["@com_github_bazelbuild_buildtools//build"],
 )
 
 go_binary(
@@ -17,6 +17,9 @@ go_binary(
 filegroup(
     name = "all_files",
     testonly = True,
-    srcs = ["main.go"],
+    srcs = [
+        "BUILD.bazel",
+        "main.go",
+    ],
     visibility = ["//visibility:public"],
 )

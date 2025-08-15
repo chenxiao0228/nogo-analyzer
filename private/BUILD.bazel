@@ -4,12 +4,14 @@ filegroup(
     srcs = [
         "BUILD.bazel",
         "def.bzl",
-        "deps.bzl",
+        # "deps.bzl",
         "deps_test.bzl",
-        "gen_deps.bzl",
+        # "gen_deps.bzl",
         "go.mod",
         "go.sum",
         "//private/cmd:all_files",
+        "deps.bzl",
+        "gen_deps.bzl",
     ],
     visibility = ["//visibility:public"],
 )

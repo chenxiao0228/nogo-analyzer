@@ -1,5 +1,5 @@
 load("@rules_go//go:def.bzl", "go_library")
-load("//private:gen_deps.bzl", "generate_deps")
+# load("//private:gen_deps.bzl", "generate_deps")
 
 go_library(
     name = "errcheck",
@@ -9,12 +9,12 @@ go_library(
     deps = ["@com_github_kisielk_errcheck//errcheck"],
 )
 
-generate_deps(
-    name = "errcheck_deps",
-    mod_file = ":go.mod",
-    sum_file = ":go.sum",
-    targets = ["//goci-lint/errcheck"],
-)
+# generate_deps(
+#     name = "errcheck_deps",
+#     mod_file = ":go.mod",
+#     sum_file = ":go.sum",
+#     targets = ["//goci-lint/errcheck"],
+# )
 
 filegroup(
     name = "all_files",

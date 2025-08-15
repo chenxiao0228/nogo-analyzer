@@ -4,10 +4,10 @@ sh_binary(
     name = "goworksync",
     srcs = ["goworksync.sh"],
     args = [
-        "$(execpath //:gobin)",
+        # "$(execpath //:gobin)",
     ],
     data = [
-        "//:gobin",
+        # "//:gobin",
     ],
     visibility = ["//visibility:public"],
 )

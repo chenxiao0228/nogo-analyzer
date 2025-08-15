@@ -26,5 +26,5 @@ filegroup(
 go_test(
     name = "tests_test",
     srcs = ["golangci_lint_test.go"],
-    deps = ["@rules_go//go/tools/bazel_testing:go_default_library"],
+    deps = ["@rules_go//go/tools/bazel_testing"],
 )

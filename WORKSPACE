@@ -1,6 +1,6 @@
-workspace(name = "com_github_sluongng_nogo_analyzer")
+# workspace(name = "com_github_sluongng_nogo_analyzer")
 
-load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+# load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 # http_archive(
 #     name = "rules_go",
