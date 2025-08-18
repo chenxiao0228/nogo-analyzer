@@ -42,8 +42,3 @@ gazelle(
     name = "gazelle",
     gazelle = "gazelle_binary",
 )
-
-alias(
-    name = "goworksync",
-    actual = "//tools:goworksync",
-)

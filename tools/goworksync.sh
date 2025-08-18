@@ -1,19 +1,13 @@
 #!/bin/bash
 
-GOBIN=$1
+find . -name go.mod -print0 |
+	while IFS= read -r -d '' f; do
+		d=$(dirname "$f")
+		(
+			cd "$d" || exit
+			echo "Running 'go mod tidy' in $d"
+			bazel run @rules_go//go -- mod tidy
+		)
+	done
 
-(
-	cd "$BUILD_WORKSPACE_DIRECTORY" || exit
-	GO="$(bazel info execution_root)/$GOBIN"
-
-	find . -name go.mod |
-		while IFS= read -r -d '' f; do
-			d=$(dirname "$f")
-			(
-				cd "$d" || exit
-				"$GO" mod tidy
-			)
-		done
-
-	"$GO" work sync
-)
+bazel run @rules_go//go -- work sync

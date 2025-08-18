@@ -1,38 +1,9 @@
-load("//staticcheck:def.bzl", "ANALYZERS", "staticcheck_analyzers")
-
-sh_binary(
-    name = "goworksync",
-    srcs = ["goworksync.sh"],
-    args = [
-        # "$(execpath //:gobin)",
-    ],
-    data = [
-        # "//:gobin",
-    ],
-    visibility = ["//visibility:public"],
-)
-
-sh_binary(
-    name = "prune-deps",
-    srcs = ["prune-deps.sh"],
-    args = [
-        "$(execpath //private/cmd/deps-prune)",
-        "private/deps.bzl",
-        "//...",
-    ],
-    data = [
-        "//private/cmd/deps-prune",
-    ],
-    visibility = ["//visibility:public"],
-)
-
 filegroup(
     name = "all_files",
     testonly = True,
     srcs = [
         "BUILD.bazel",
         "goworksync.sh",
-        "prune-deps.sh",
     ],
     visibility = ["//visibility:public"],
 )
