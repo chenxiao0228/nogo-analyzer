@@ -1,6 +1,5 @@
 load("@rules_go//go:def.bzl", "go_library", "go_test")
 load("//golangci-lint:def.bzl", "ANALYZERS")
-# load("//private:deps_test.bzl", "prune_ext_deps")
 
 exports_files([
     "def.bzl",
