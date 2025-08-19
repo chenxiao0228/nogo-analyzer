@@ -1,29 +1,29 @@
-# load("@rules_go//go/tools/bazel_testing:def.bzl", "go_bazel_test")
+load("@nogo-analyzer//private:go_bazel_test.bzl", "go_bazel_test")
 
 # gazelle:lang test_filegroup
 
-# [
-#     go_bazel_test(
-#         name = i,
-#         size = "medium",
-#         srcs = [
-#             i + "_test.go",
-#             "util.go",
-#         ],
-#         rule_files = [
-#             "@com_github_sluongng_nogo_analyzer//:all_files",
-#             "@rules_go//:all_files",
-#             "@gazelle//:all_files",
-#         ],
-#     )
-#     for i in [
-#         "errcheck",
-#         "gofmt",
-#         "goimports",
-#         "ineffassign",
-#         "prealloc",
-#     ]
-# ]
+[
+    go_bazel_test(
+        name = i,
+        size = "medium",
+        srcs = [
+            i + "_test.go",
+            "util.go",
+        ],
+        rule_files = [
+            "@nogo-analyzer//:all_files",
+            "@rules_go//:all_files",
+            "@gazelle//:all_files",
+        ],
+    )
+    for i in [
+        "errcheck",
+        "gofmt",
+        "goimports",
+        "ineffassign",
+        "prealloc",
+    ]
+]
 
 filegroup(
     name = "all_files",
