@@ -4,7 +4,6 @@ filegroup(
     srcs = [
         "BUILD.bazel",
         "def.bzl",
-        # "gen_deps.bzl",
         "go.mod",
         "go.sum",
         "//private/cmd:all_files",
