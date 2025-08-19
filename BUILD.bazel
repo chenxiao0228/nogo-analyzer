@@ -42,3 +42,8 @@ gazelle(
     name = "gazelle",
     gazelle = "gazelle_binary",
 )
+
+alias(
+    name = "goworksync",
+    actual = "@nogo-analyzer//tools:goworksync",
+)
