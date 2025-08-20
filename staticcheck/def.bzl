@@ -163,7 +163,7 @@ ANALYZERS = [
     "U1000",
 ]
 
-def staticcheck_analyzers(analyzers, prefix_path = "@nogo_analyzer//staticcheck"):
+def staticcheck_analyzers(analyzers, prefix_path = "@nogo-analyzer//staticcheck"):
     """A helper function that make it easier/cleaner to declare these analyers in nogo target.
 
     Instead of:
