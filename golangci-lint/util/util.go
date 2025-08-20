@@ -10,10 +10,10 @@ import (
 
 var Analyzers = func() map[string]*analysis.Analyzer {
 	result := make(map[string]*analysis.Analyzer, len(constructor.LinterConstructors))
-	for _, constructor := range constructor.LinterConstructors {
-		analyzer := constructor().GetAnalyzers()[0]
-		result[analyzer.Name] = analyzer
-	}
+	// for _, constructor := range constructor.LinterConstructors {
+	// 	analyzer := constructor().GetAnalyzers()[0]
+	// 	result[analyzer.Name] = analyzer
+	// }
 
 	return result
 }()

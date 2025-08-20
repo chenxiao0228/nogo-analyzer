@@ -12,13 +12,6 @@ go_deps = use_extension("@gazelle//:extensions.bzl", "go_deps")
 go_deps.from_file(
     go_work = "//:go.work",
 )
-go_deps.module_override(
-    patch_strip = 1,
-    patches = [
-        "//golangci-lint/patch:002_export_getter.patch",
-    ],
-    path = "github.com/golangci/golangci-lint",
-)
 use_repo(
     go_deps,
     "co_honnef_go_tools",

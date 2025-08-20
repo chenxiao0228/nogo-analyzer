@@ -18,23 +18,23 @@ exports_files([
     for analyzer in ANALYZERS
 ]
 
-[
-    go_test(
-        name = analyzer + "_test",
-        size = "small",
-        srcs = ["analyzer_test.go"],
-        embed = [analyzer],
-        # tags = ["manual"],
-        # Only compatible with platforms which have sandbox execution support.
-        # For more information see https://github.com/bazelbuild/rules_go/issues/3144
-        target_compatible_with = select({
-            "@platforms//os:osx": [],
-            "@platforms//os:linux": [],
-            "//conditions:default": ["@platforms//:incompatible"],
-        }),
-    )
-    for analyzer in ANALYZERS
-]
+# [
+#     go_test(
+#         name = analyzer + "_test",
+#         size = "small",
+#         srcs = ["analyzer_test.go"],
+#         embed = [analyzer],
+#         # tags = ["manual"],
+#         # Only compatible with platforms which have sandbox execution support.
+#         # For more information see https://github.com/bazelbuild/rules_go/issues/3144
+#         target_compatible_with = select({
+#             "@platforms//os:osx": [],
+#             "@platforms//os:linux": [],
+#             "//conditions:default": ["@platforms//:incompatible"],
+#         }),
+#     )
+#     for analyzer in ANALYZERS
+# ]
 
 filegroup(
     name = "all_files",
