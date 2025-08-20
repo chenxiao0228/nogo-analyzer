@@ -22,7 +22,6 @@ go_deps.module_override(
 use_repo(
     go_deps,
     "co_honnef_go_tools",
-    "com_github_bazelbuild_buildtools",
     "com_github_golangci_gofmt",
     "com_github_golangci_golangci_lint",
     "com_github_golangci_prealloc",
